@@ -51,8 +51,7 @@ public class StackImpl implements Stack {
 
 	@Override
 	public String peek() {
-		// TODO Auto-generated method stub
-		return null;
+		return elements[top];
 	}
 
 
