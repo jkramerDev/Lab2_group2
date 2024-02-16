@@ -4,26 +4,30 @@ public class StackTester {
 
 	public static void main(String[] args) {
 
-		Stack stackTester = new StackImpl(5);
-		System.out.println(stackTester.isEmpty());
-		stackTester.push("thing in stack");
-		stackTester.push("another thing");
-		stackTester.push("third thing");
-		stackTester.size();
-		System.out.println(stackTester.isFull());
-		stackTester.push("yet another thing");
-		stackTester.size();
-		stackTester.push("last thing");
-		System.out.println(stackTester.isFull());
-		stackTester.peek();
-		
-		stackTester.display();
-		
-
-	}
+		Stack stack = new StackImpl(8);					//initializes the Stack
+		stack.push("John Doe");							//add rider
+		stack.push("Bob McDonald");						//add rider
+		stack.push("Billy Kennedy");					//add rider
+		stack.push("Jane Foe");							//add rider
+		stack.push("Zach Don");							//add rider
+		stack.push("Mia Thompson");						//add rider
+		stack.display();								//print stack
+		System.out.println();
+		stack.peek();									//peek at stack
+		System.out.println();
+		stack.pop();									//pop top item
+		stack.display();								//print stack
+		System.out.println();
+		stack.peek();									//peek at stack
+		System.out.println();
+		stack.push("Jeremy West");						//add rider
+		stack.push("Frank kay");						//add rider
+		stack.peek();									//peek at stack
+		System.out.println();
+		while (stack.isEmpty() == false) {				//while stack is not empty
+			stack.pop();								//pop top item
+		}
+		System.out.println(stack.isEmpty());			//prints if stack is empty
 	
-	public static void runTests(Stack stack) {
-	 	
 	}
-
 }
