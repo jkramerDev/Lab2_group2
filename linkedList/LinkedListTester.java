@@ -4,30 +4,25 @@ public class LinkedListTester {
 
 	public static void main(String[] args) {
 		// create implementation, then...
-		LinkedList l = new LinkedListImpl();
-		l.addItem("one");
-		l.addItem("two" );
-		l.addItem("three");
-		l.addItem("four");
-		l.addItem("five");
-		l.addItem("six");
-		l.addItem("seven");
-		l.addItem("eight");
-		l.listItems();
+		LinkedList route = new LinkedListImpl();		//initializes the LinkedList
+		route.addItem("Grocery Store");					//adds item
+		route.addItem("Chick-fil-a");					//adds item
+		route.addItem("Beach");							//adds item
+		route.addItem("Campus");						//adds item
+		route.listItems();								//displays list
 		System.out.println();
-		l.deleteItem("two");
-		l.listItems();
+		route.isItemInList("Beach");					//checks if item is in list (true)
 		System.out.println();
-		l.isItemInList("one");
-		l.isItemInList("two");
+		route.isItemInList("Canada");					//checks if item is in list (false)
 		System.out.println();
-		l.itemCount();
+		route.deleteItem("Chick-fil-a");				//deletes item
+		route.listItems();								//displays list
 		System.out.println();
-		l.insertBefore("two", "three");
-		l.listItems();
+		route.insertBefore("Starbucks", "Beach");		//inserts item before "Beach"
+		route.listItems();								//displays list
 		System.out.println();
-		l.insertAfter("nine", "eight");
-		l.listItems();
+		route.insertAfter("Target", "Campus");			//inserts item 
+		route.listItems();								//displays list
 	}
 
 }
